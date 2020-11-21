@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "flickpick",
+    "name": "FlickPick",
     "slug": "flickpick",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -27,6 +27,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Group 27's Final Project for Fall 2020 COP4331."
   }
 }
