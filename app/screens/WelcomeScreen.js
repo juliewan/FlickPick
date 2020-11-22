@@ -2,7 +2,6 @@ import React from 'react';
 import  { ImageBackground, Image, View, StyleSheet, Text, TouchableOpacity } from "react-native";
 
 const bg = { uri: "https://wallpapercave.com/wp/wp6608507.jpg" };
-//const fp = { uri: "https://i.imgur.com/7IyC3Kj.png" };
 
 function WelcomeScreen({ navigation }) {
     return (

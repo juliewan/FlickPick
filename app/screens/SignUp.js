@@ -17,11 +17,11 @@ export default function SignUp ({ navigation }) {
             </View>
             <View style={styles.pwBar}>
                 <Icon name="lock" color="#334161" size={24}/>
-                <TextInput placeholder="Password" placeholderTextColor="#334161" style={styles.textInput}/>
+                <TextInput placeholder="Password" placeholderTextColor="#334161" secureTextEntry={true} style={styles.textInput}/>
             </View>
             <View style={styles.pwBar2}>
                 <Icon name="lock" color="#334161" size={24}/>
-                <TextInput placeholder="Re-Enter Password" placeholderTextColor="#334161" style={styles.textInput}/>
+                <TextInput placeholder="Re-Enter Password" placeholderTextColor="#334161" secureTextEntry={true} style={styles.textInput}/>
             </View>
             <TouchableOpacity style={styles.signUpButton} onPress={() => navigation.navigate('WelcomeScreen')}>
                 <Text style={styles.buttonText}>Sign Up</Text>
@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
         shadowRadius: 2,
     },
     userBar: {
+        alignItems: 'center',
         position: "absolute",
         top: 240,
         backgroundColor: "#465881",
@@ -77,6 +78,7 @@ const styles = StyleSheet.create({
         shadowRadius: 2,
     },
     pwBar: {
+        alignItems: 'center',
         position: "absolute",
         top: 295,
         backgroundColor: "#465881",
@@ -94,6 +96,7 @@ const styles = StyleSheet.create({
         shadowRadius: 2,
     },
     pwBar2: {
+        alignItems: 'center',
         position: "absolute",
         top: 350,
         backgroundColor: "#465881",

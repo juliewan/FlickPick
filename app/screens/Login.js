@@ -16,7 +16,7 @@ export default function Login ({ navigation }) {
             </View>
             <View style={styles.pwBar}>
                 <Icon name="lock" color="#334161" size={24}/>
-                <TextInput placeholder="Password" placeholderTextColor="#334161" style={styles.textInput}/>
+                <TextInput placeholder="Password" placeholderTextColor="#334161" secureTextEntry={true} style={styles.textInput}/>
             </View>
             <TouchableOpacity style={styles.loginButton} onPress={() => navigation.navigate('LookUpMovies')}>
                 <Text style={styles.buttonText} >Login</Text>
@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
         shadowRadius: 2,
     },
     userBar: {
+        alignItems: 'center',
         position: "absolute",
         top: 230,
         backgroundColor: "#465881",
@@ -62,6 +63,7 @@ const styles = StyleSheet.create({
         shadowRadius: 2,
     },
     pwBar: {
+        alignItems: 'center',
         position: "absolute",
         top: 285,
         backgroundColor: "#465881",
