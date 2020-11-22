@@ -7,11 +7,20 @@ import  { Text, TextInput, ScrollView, StyleSheet, View,
 export default function LookUpMovies ({navigation}) {
     const apiurl = "http://www.omdbapi.com/?apikey=d97766ae";
 
-    const [state, setState] = useState({
-        s: "",
-        results: [],
-        selected: {},
+  const [state, setState] = useState({
+    s: "",
+    results: [],
+    selected: {},
+  });
+
+  const search = () => {
+    axios(apiurl + "&s=" + state.s).then(({ data }) => {
+      let results = data.Search;
+      setState((prevState) => {
+        return { ...prevState, results: results };
+      });
     });
+  };
 
     const search = () => {
         axios(apiurl + "&s=" + state.s).then(({ data }) => {
